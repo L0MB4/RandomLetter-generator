@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--LINK AL CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <title>Generatore di lettere</title>
+  </head>
+  <body>
+    <!--CONTENITORE GENERALE CON SFONDO-->
+    <div id="general-container">
+      <!--BOLLA CHE RUOTA DURANTE LA GENERAZIONE (INFINITO)-->
+      <div id="blob"></div>
+    </div>
+
+    <!--CONTENITORE DELLA GENERAZIONE-->
+    <div id="contenitore-generico">
+      <div id="generator-container">
+        <h1>Generatore di Lettere</h1>
+        <div class="line"></div>
+        <div class="cloud"></div>
+        <div id="letter-generator"></div>
+        <div id="placeholder">?</div>
+        <div class="line"></div>
+        <form id="settings">
+          <label class="checkbox">
+            <input type="checkbox" id="t1" name="esc" />
+            <span class="checkmark"></span>
+            <span class="text">Includi lettere straniere (w,x,y...) </span>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" id="t2" name="esc" />
+            <span class="checkmark"></span>
+            <span class="text">Includi numeri (BETA)</span>
+          </label>
+        </form>
+
+        <div id="counter">Lettere rimanenti: 20</div>
+        <button type="button" id="generate">Genera</button>
+      </div>
+
+      <!--CRONOLOGIA-->
+      <div id="letter-history">
+        <h2>Lettere Estratte</h2>
+        <div class="line"></div>
+        <div id="container-lettere"></div>
+      </div>
+    </div>
+  </body>
+
+  <script src="app.js" defer></script>
+</html>
